@@ -17,17 +17,18 @@ class YouTubeAudioExtractor:
             artist:str,
             cover_url:str=DEFAULT_SETTINGS.cover_file_path,
             quality:int=DEFAULT_SETTINGS.quality,
-            codec:Codec=DEFAULT_SETTINGS.codec,
             genre:str=DEFAULT_SETTINGS.genre,
-            album=None,
-            comment=None,
-            title=None,
-            year=None
+            codec:Codec=DEFAULT_SETTINGS.codec,
+            album:str='',
+            comment:str='',
+            title:str='',
+            year:int=0
         ):
         self.video_url = video_url
         self.artist = artist
         self.cover_url = cover_url
         self.quality = quality
+        self.codec = codec if isinstance(codec, Codec) else Codec(codec)
         self.genre = genre
         self.album = album
         self.comment = comment
