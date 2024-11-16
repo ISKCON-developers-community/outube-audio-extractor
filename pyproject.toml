@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "youtube-audio-extractor"
+version = "0.1.0"
+description = "Python module and cli tool for extracting audio from youtube"
+authors = ["Aliaksandr <apxont@disroot.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
